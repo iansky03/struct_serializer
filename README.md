@@ -1,7 +1,7 @@
 # struct_serializer
 struct_serializer is a library for convert C++ struct to JSON and vice versa
 
-#usage
+# usage
 * define your struct
 * add macro statement
 * use ::dox::serialize::SerializeToJson for convert Struct to JSON, or use 
@@ -51,13 +51,13 @@ Student new_stucent;
 ::dox::serialize::DeserializeFromJsonString(new_stucent, student_json.dump());
 ```
 
-#field type support
+# field type support
 the struct field types can be following:
 * basic types: such as int、float, and std::string
 * container type: std::vector<basic_type>、std::map<std::string, basic_type>
 * other struct with STRUCT_META_GLOBAL statement
 
-#macro STRUCT_META_GLOBAL
+# macro STRUCT_META_GLOBAL
 STRUCT_META_GLOBAL support normal struct definition，or you can assign an alias name for some certain fields with ()
 
 ```C++
@@ -66,7 +66,7 @@ STRUCT_META_GLOBAL(Student, (name, /person/name_), (age, /person/age_), height, 
             scores_map, vision)
 ```
 
-#extension
+# extension
 struct_serializer is base on ::nlohmann::json，you can replace another json lib(even a xml lib).
 see the template class in "json.h"
 
